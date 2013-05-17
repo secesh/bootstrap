@@ -137,7 +137,7 @@ angular.module('ui.bootstrap.typeahead', ['ui.bootstrap.position'])
       modelCtrl.$render = function () {
         var locals = {};
         locals[parserResult.itemName] = selected || modelCtrl.$viewValue;
-        element.val(parserResult.viewMapper(scope, locals) || modelCtrl.$viewValue);
+        element.val(parserResult.modelMapper(scope, locals) || modelCtrl.$viewValue);
         selected = undefined;
       };
 
